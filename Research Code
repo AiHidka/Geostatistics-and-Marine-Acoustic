@@ -1,1 +1,39 @@
+#Research Location
+import pandas as pd
+import matplotlib.pyplot as plt
+import cartopy.crs as ccrs
+import cartopy.feature as cfeature
+
+# 1. Load Data
+file_path = "2021_NASC.csv"  # Ganti dengan path file Anda
+data = pd.read_csv(file_path)
+# Bersihkan data
+data = data.dropna(subset=['latitude', 'longitude', 'NASC'])
+
+# 2. Cartopy
+fig = plt.figure(figsize=(14, 10))
+ax = plt.axes(projection=ccrs.PlateCarree())  # Gunakan proyeksi PlateCarree untuk peta geografis
+ax.set_extent([90, 150, -15, 50])  # Longitude dan Latitude untuk Asia Tenggara hingga Jepang
+
+# Feature
+ax.add_feature(cfeature.COASTLINE, linewidth=0.8)
+ax.add_feature(cfeature.BORDERS, linestyle=':', linewidth=0.5)
+ax.add_feature(cfeature.LAND, edgecolor='black', alpha=0.3)
+ax.add_feature(cfeature.OCEAN, alpha=0.3)
+ax.gridlines(draw_labels=True, dms=True, x_inline=False, y_inline=False)
+
+# 3. Scatterplot Data Location
+sc = ax.scatter(
+    data['longitude'], data['latitude'], c=data['NASC'], 
+    cmap='viridis', s=50, alpha=0.7, transform=ccrs.PlateCarree()
+)
+
+# 4. Colorbar
+cbar = plt.colorbar(sc, ax=ax, orientation='vertical', shrink=0.6, pad=0.05)
+cbar.set_label('NASC Intensity', fontsize=12)
+
+# 5. Tambahkan Detail dan Tampilkan Peta
+ax.set_title('NASC Map Location 2021-2024', fontsize=16)
+plt.show()
+
 
