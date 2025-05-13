@@ -1,4 +1,4 @@
-#Research Location
+#Research Location for NASC
 import pandas as pd
 import matplotlib.pyplot as plt
 import cartopy.crs as ccrs
@@ -35,5 +35,51 @@ cbar.set_label('NASC Intensity', fontsize=12)
 # 5. Tambahkan Detail dan Tampilkan Peta
 ax.set_title('NASC Map Location 2021-2024', fontsize=16)
 plt.show()
+
+# Research Map for Trawl Data
+import pandas as pd
+import matplotlib.pyplot as plt
+import cartopy.crs as ccrs
+import cartopy.feature as cfeature
+
+# 1. Load Data
+file_path = "2024_trawl.csv"  # Ganti dengan path file Anda
+data = pd.read_csv(file_path)
+
+# Bersihkan data: pastikan tidak ada nilai NaN di kolom latitude, longitude, length, dan weight
+data = data.dropna(subset=['latitude', 'longitude', 'length', 'weight'])
+
+# Konversi kolom 'length' dan 'weight' menjadi tipe numerik
+data['length'] = pd.to_numeric(data['length'], errors='coerce')
+data['weight'] = pd.to_numeric(data['weight'], errors='coerce')
+
+# Drop baris dengan nilai NaN setelah konversi
+data = data.dropna(subset=['length', 'weight'])
+
+# 2. Setup Peta Geografis (Asia Tenggara hingga Jepang)
+fig = plt.figure(figsize=(14, 10))
+ax = plt.axes(projection=ccrs.PlateCarree())  # Gunakan proyeksi PlateCarree untuk peta geografis
+ax.set_extent([90, 150, -15, 50])  # Longitude dan Latitude untuk Asia Tenggara hingga Jepang
+
+# Tambahkan fitur peta seperti garis pantai, negara, dan perbatasan
+ax.add_feature(cfeature.COASTLINE, linewidth=0.8)
+ax.add_feature(cfeature.BORDERS, linestyle=':', linewidth=0.5)
+ax.add_feature(cfeature.LAND, edgecolor='black', alpha=0.3)
+ax.add_feature(cfeature.OCEAN, alpha=0.3)
+ax.gridlines(draw_labels=True, dms=True, x_inline=False, y_inline=False)
+
+# 3. Scatterplot Lokasi Data
+# Gunakan kolom 'length' untuk warna dan 'weight' untuk ukuran bubble
+sc = ax.scatter(
+    data['longitude'], data['latitude'], c=data['length'], 
+    cmap='viridis', s=data['weight']*10, alpha=0.7, transform=ccrs.PlateCarree()
+)
+
+# 4. Tambahkan Colorbar
+cbar = plt.colorbar(sc, ax=ax, orientation='vertical', shrink=0.6, pad=0.05)
+cbar.set_label('Length of Fish (cm)', fontsize=12)
+
+# 5. Tambahkan Detail dan Tampilkan Peta
+ax.set_title('Trawl Data Distribution Map 2024 (Length and Weight)', fontsize=16)
 
 
