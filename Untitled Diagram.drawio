@@ -1,32 +1,74 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36" version="27.0.6">
   <diagram name="Page-1" id="pyWUfLzprs8-RjYu1XeS">
-    <mxGraphModel dx="683" dy="772" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="853" dy="965" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="pqe-dq7FHGTc8bpuQqQO-1" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Geostatistics Flowchart for Marine Acoustic Data&lt;/h1&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="300" y="10" width="290" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="LkquOEXud1LDpQ07gLJA-3" value="" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="LkquOEXud1LDpQ07gLJA-1" target="LkquOEXud1LDpQ07gLJA-2">
+        <mxCell id="LkquOEXud1LDpQ07gLJA-24" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="55" y="100" width="765" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="LkquOEXud1LDpQ07gLJA-17" value="make kriging (spatial interpolation)" style="whiteSpace=wrap;html=1;" vertex="1" parent="LkquOEXud1LDpQ07gLJA-24">
+          <mxGeometry y="134.4" width="195.1006711409396" height="51.2" as="geometry" />
+        </mxCell>
+        <mxCell id="LkquOEXud1LDpQ07gLJA-23" value="" style="group" vertex="1" connectable="0" parent="LkquOEXud1LDpQ07gLJA-24">
+          <mxGeometry x="43.64093959731544" width="721.3590604026846" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="LkquOEXud1LDpQ07gLJA-3" value="" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="LkquOEXud1LDpQ07gLJA-23" source="LkquOEXud1LDpQ07gLJA-1" target="LkquOEXud1LDpQ07gLJA-2">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="LkquOEXud1LDpQ07gLJA-1" value="Data Availability and Initial Preparation" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="100" y="100" width="100" height="70" as="geometry" />
+        <mxCell id="LkquOEXud1LDpQ07gLJA-1" value="Data Availability and Initial Preparation" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="LkquOEXud1LDpQ07gLJA-23">
+          <mxGeometry x="2.5671140939597317" width="102.68456375838926" height="89.60000000000001" as="geometry" />
         </mxCell>
-        <mxCell id="LkquOEXud1LDpQ07gLJA-6" value="" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="LkquOEXud1LDpQ07gLJA-2" target="LkquOEXud1LDpQ07gLJA-5">
+        <mxCell id="LkquOEXud1LDpQ07gLJA-6" value="" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="LkquOEXud1LDpQ07gLJA-23" source="LkquOEXud1LDpQ07gLJA-2" target="LkquOEXud1LDpQ07gLJA-5">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="LkquOEXud1LDpQ07gLJA-2" value="coordinat standardization,NASC/sA,catch data" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="235" y="115" width="190" height="40" as="geometry" />
+        <mxCell id="LkquOEXud1LDpQ07gLJA-2" value="coordinat standardization,NASC/sA,catch data" style="whiteSpace=wrap;html=1;" vertex="1" parent="LkquOEXud1LDpQ07gLJA-23">
+          <mxGeometry x="141.19127516778522" y="19.2" width="195.1006711409396" height="51.2" as="geometry" />
         </mxCell>
-        <mxCell id="LkquOEXud1LDpQ07gLJA-9" value="" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="LkquOEXud1LDpQ07gLJA-5" target="LkquOEXud1LDpQ07gLJA-7">
+        <mxCell id="LkquOEXud1LDpQ07gLJA-9" value="" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="LkquOEXud1LDpQ07gLJA-23" source="LkquOEXud1LDpQ07gLJA-5" target="LkquOEXud1LDpQ07gLJA-7">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="LkquOEXud1LDpQ07gLJA-5" value="Exploratory Data Analysis (EDA)" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="470" y="100" width="100" height="70" as="geometry" />
+        <mxCell id="LkquOEXud1LDpQ07gLJA-5" value="Exploratory Data Analysis (EDA)" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="LkquOEXud1LDpQ07gLJA-23">
+          <mxGeometry x="382.5" width="102.68456375838926" height="89.60000000000001" as="geometry" />
         </mxCell>
-        <mxCell id="LkquOEXud1LDpQ07gLJA-7" value="coordinat standardization,NASC/sA,catch data" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="610" y="115" width="190" height="40" as="geometry" />
+        <mxCell id="LkquOEXud1LDpQ07gLJA-11" value="" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="LkquOEXud1LDpQ07gLJA-23" source="LkquOEXud1LDpQ07gLJA-7" target="LkquOEXud1LDpQ07gLJA-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LkquOEXud1LDpQ07gLJA-7" value="see ,mean,variace, standard deviation, skewness" style="whiteSpace=wrap;html=1;" vertex="1" parent="LkquOEXud1LDpQ07gLJA-23">
+          <mxGeometry x="526.2583892617449" y="19.2" width="195.1006711409396" height="51.2" as="geometry" />
+        </mxCell>
+        <mxCell id="LkquOEXud1LDpQ07gLJA-14" value="" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="LkquOEXud1LDpQ07gLJA-23" source="LkquOEXud1LDpQ07gLJA-10" target="LkquOEXud1LDpQ07gLJA-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LkquOEXud1LDpQ07gLJA-10" value="Structural Analysis" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="LkquOEXud1LDpQ07gLJA-23">
+          <mxGeometry x="569.8993288590603" y="115.2" width="107.81879194630872" height="89.60000000000001" as="geometry" />
+        </mxCell>
+        <mxCell id="LkquOEXud1LDpQ07gLJA-16" value="" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="LkquOEXud1LDpQ07gLJA-23" source="LkquOEXud1LDpQ07gLJA-13" target="LkquOEXud1LDpQ07gLJA-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LkquOEXud1LDpQ07gLJA-13" value="find best variogram spherical, linear, exponential,linear,gaussian" style="whiteSpace=wrap;html=1;" vertex="1" parent="LkquOEXud1LDpQ07gLJA-23">
+          <mxGeometry x="331.1577181208054" y="134.4" width="195.1006711409396" height="51.2" as="geometry" />
+        </mxCell>
+        <mxCell id="LkquOEXud1LDpQ07gLJA-15" value="Estimation" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="LkquOEXud1LDpQ07gLJA-23">
+          <mxGeometry x="184.83221476510067" y="115.2" width="107.81879194630872" height="89.60000000000001" as="geometry" />
+        </mxCell>
+        <mxCell id="LkquOEXud1LDpQ07gLJA-21" value="" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="LkquOEXud1LDpQ07gLJA-23" source="LkquOEXud1LDpQ07gLJA-19" target="LkquOEXud1LDpQ07gLJA-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LkquOEXud1LDpQ07gLJA-19" value="Output and Reporting" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="LkquOEXud1LDpQ07gLJA-23">
+          <mxGeometry y="230.4" width="107.81879194630872" height="89.60000000000001" as="geometry" />
+        </mxCell>
+        <mxCell id="LkquOEXud1LDpQ07gLJA-20" value="&lt;p&gt;fish biomass/density distribution estimation map&lt;/p&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="LkquOEXud1LDpQ07gLJA-23">
+          <mxGeometry x="151.45973154362414" y="249.6" width="195.1006711409396" height="51.2" as="geometry" />
+        </mxCell>
+        <mxCell id="LkquOEXud1LDpQ07gLJA-18" value="" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="LkquOEXud1LDpQ07gLJA-24" source="LkquOEXud1LDpQ07gLJA-15" target="LkquOEXud1LDpQ07gLJA-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LkquOEXud1LDpQ07gLJA-22" value="" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="LkquOEXud1LDpQ07gLJA-24" source="LkquOEXud1LDpQ07gLJA-17" target="LkquOEXud1LDpQ07gLJA-19">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
