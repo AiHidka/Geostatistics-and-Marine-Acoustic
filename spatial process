@@ -186,7 +186,7 @@ for metric in ['density', 'biomass']:
     plt.show()
 
 
-#See normal distribution for NASC, density, and biomass and cleaned data
+# See normal distribution for NASC, density, and biomass and cleaned data
 
 import pandas as pd
 import numpy as np
@@ -461,7 +461,7 @@ Using a standard kernel like the RBF (Radial Basis Function) kernel, which is of
 Experimenting with various kernel parameters to optimize the model's performance for this specific dataset.
 
 
-# Biomass log had highest CV for disjunctive kriging begin to indicator variogram 
+# Biomass log had highest CV for disjunctive kriging begin to indicator variogram and kriging probability
 
 import pandas as pd
 import numpy as np
