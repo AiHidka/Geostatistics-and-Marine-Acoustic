@@ -1,4 +1,5 @@
 # Make Claster using K-means and DBscan to see distribution of fish species
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -183,3 +184,376 @@ for metric in ['density', 'biomass']:
     plt.legend(title='Species', bbox_to_anchor=(1.05, 1), loc='upper left')
     plt.tight_layout()
     plt.show()
+
+
+#See normal distribution for NASC, density, and biomass and cleaned data
+
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+from scipy.stats import shapiro, kstest, normaltest, probplot
+
+# 1. Load Data
+file_path = "result_density_and_biomass_Songhang_ship_2024.csv"  # Replace with your file path
+try:
+    data = pd.read_csv(file_path)
+except FileNotFoundError:
+    print(f"Error: The file '{file_path}' was not found.")
+    exit()
+
+# Clean the data
+data = data.dropna(subset=['NASC', 'total_density', 'total_biomass'])
+data = data.replace([np.inf, -np.inf], np.nan).dropna()
+
+# List of variables to be checked
+variables = ['NASC', 'total_density', 'total_biomass']
+
+# Apply a log transformation
+for var in variables:
+    # Add a small value to avoid log(0)
+    data[f'{var}_log'] = np.log(data[var] + 1)
+
+# 2. Visualize Distribution and Perform Statistical Tests for Each Variable
+for var in variables:
+    log_var = f'{var}_log'
+    
+    # Ensure the variable exists in the data
+    if var not in data.columns:
+        print(f"Variable {var} not found in the dataset.")
+        continue
+
+    # Visualize Distribution
+    plt.figure(figsize=(12, 6))
+    sns.histplot(data[log_var], kde=True, bins=30, color='blue')
+    plt.title(f'Histogram of {log_var}')
+    plt.xlabel(log_var)
+    plt.ylabel('Frequency')
+    plt.show()
+
+    # QQ-Plot
+    plt.figure(figsize=(12, 6))
+    probplot(data[log_var], dist="norm", plot=plt)
+    plt.title(f'QQ-Plot of {log_var}')
+    plt.show()
+
+    # 3. Statistical Tests
+    print(f"### Statistical Tests for {log_var} ###")
+
+    # Shapiro-Wilk Test
+    if len(data[log_var]) < 3 or len(data[log_var]) > 5000:
+        print("Shapiro-Wilk Test is suitable for sample sizes between 3 and 5000.")
+        print(f"Skipping test for {log_var}. Sample size: {len(data[log_var])}\n")
+    else:
+        stat, p = shapiro(data[log_var])
+        print(f"Shapiro-Wilk Test: Statistic={stat:.3f}, p-value={p:.3f}")
+        if p > 0.05:
+            print(f"The distribution of {log_var} is likely normal (fail to reject H0).\n")
+        else:
+            print(f"The distribution of {log_var} is likely not normal (reject H0).\n")
+
+    # Kolmogorov-Smirnov Test
+    stat, p = kstest(data[log_var], 'norm', args=(data[log_var].mean(), data[log_var].std()))
+    print(f"Kolmogorov-Smirnov Test: Statistic={stat:.3f}, p-value={p:.3f}")
+    if p > 0.05:
+        print(f"The distribution of {log_var} is likely normal (fail to reject H0).\n")
+    else:
+        print(f"The distribution of {log_var} is likely not normal (reject H0).\n")
+
+    # D'Agostino and Pearson's Test
+    stat, p = normaltest(data[log_var])
+    print(f"D'Agostino and Pearson's Test: Statistic={stat:.3f}, p-value={p:.3f}")
+    if p > 0.05:
+        print(f"The distribution of {log_var} is likely normal (fail to reject H0).\n")
+    else:
+        print(f"The distribution of {log_var} is likely not normal (reject H0).\n")
+
+
+# already analyzed data didnt had normal distribution so we cannot using regular variogram, going to transformation and disjunctive kriging
+
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+from scipy.stats import probplot, variation, shapiro
+
+# Load Data
+file_path = "result_density_and_biomass_Songhang_ship_2024.csv"
+try:
+    data = pd.read_csv(file_path)
+except FileNotFoundError:
+    print(f"Error: The file '{file_path}' was not found.")
+    exit()
+
+# Cleaning Data - drop missing values only
+data = data.dropna(subset=['latitude', 'longitude', 'NASC', 'total_density', 'total_biomass'])
+data = data.replace([np.inf, -np.inf], np.nan).dropna()
+
+
+# Apply Log Transformation
+data['NASC_log'] = np.log(data['NASC'] + 1)
+data['total_density_log'] = np.log(data['total_density'] + 1)
+data['total_biomass_log'] = np.log(data['total_biomass'] + 1)
+
+# Function to create histograms
+def plot_histograms(data, columns, titles, xlabels):
+    """
+    Creates histograms for multiple columns at once
+    """
+    fig, axes = plt.subplots(1, len(columns), figsize=(15, 5))
+    
+    for i, (col, title, xlabel) in enumerate(zip(columns, titles, xlabels)):
+        sns.histplot(data[col], kde=True, bins=30, ax=axes[i])
+        axes[i].set_title(title)
+        axes[i].set_xlabel(xlabel)
+        axes[i].set_ylabel('Frequency')
+    
+    plt.tight_layout()
+    plt.show()
+
+# Parameters for plotting
+columns_to_plot = ['NASC_log', 'total_density_log', 'total_biomass_log']
+titles = ['Histogram of Log NASC', 'Histogram of Log Total Density', 'Histogram of Log Total Biomass']
+xlabels = ['Log NASC', 'Log Total Density', 'Log Total Biomass']
+
+# Call the function to create histograms
+plot_histograms(data, columns_to_plot, titles, xlabels)
+
+# 1. Data Variability Analysis (without outlier removal)
+print("=== DATA VARIABILITY ANALYSIS (WITHOUT OUTLIER REMOVAL) ===")
+print(f"Number of data points: {len(data)}")
+
+# Calculate variability metrics for each variable
+def calculate_variability_metrics(data, columns):
+    """
+    Calculates variability metrics for each column
+    """
+    results = {}
+    for col in columns:
+        mean_val = np.mean(data[col])
+        std_val = np.std(data[col])
+        cv = (std_val / mean_val) * 100 if mean_val != 0 else 0
+        iqr = np.percentile(data[col], 75) - np.percentile(data[col], 25)
+        range_val = np.max(data[col]) - np.min(data[col])
+        
+        results[col] = {
+            'mean': mean_val,
+            'std': std_val,
+            'cv': cv,
+            'iqr': iqr,
+            'range': range_val
+        }
+        
+        print(f"\n{col}:")
+        print(f"  Mean: {mean_val:.4f}")
+        print(f"  Standard Deviation: {std_val:.4f}")
+        print(f"  Coefficient of Variation (CV): {cv:.2f}%")
+        print(f"  IQR: {iqr:.4f}")
+        print(f"  Range: {range_val:.4f}")
+        
+        # Interpret CV
+        if cv < 15:
+            print("  CV Interpretation: Low variability (homogeneous)")
+        elif cv < 30:
+            print("  CV Interpretation: Moderate variability")
+        else:
+            print("  CV Interpretation: High variability")
+    
+    return results
+
+variability_results = calculate_variability_metrics(data, columns_to_plot)
+
+# 2. Distribution Analysis with QQ-Plot
+print("\n=== DISTRIBUTION ANALYSIS WITH QQ-PLOTS ===")
+for col in columns_to_plot:
+    plt.figure(figsize=(10, 6))
+    probplot(data[col], dist="norm", plot=plt)
+    plt.title(f'QQ-Plot for {col}')
+    plt.show()
+    
+    # Shapiro-Wilk normality test
+    if len(data[col]) >= 3 and len(data[col]) <= 5000:
+        stat, p_value = shapiro(data[col])
+        print(f"Shapiro-Wilk Test for {col}: statistic={stat:.4f}, p-value={p_value:.4f}")
+        if p_value > 0.05:
+            print(f"  {col} is normally distributed (fail to reject H0)")
+        else:
+            print(f"  {col} is not normally distributed (reject H0)")
+    else:
+        print(f"Shapiro-Wilk Test skipped for {col} due to sample size constraints (n={len(data[col])})")
+
+# 3. Spatial Data Visualization
+print("\n=== SPATIAL DATA VISUALIZATION ===")
+fig, axes = plt.subplots(1, 3, figsize=(18, 6))
+
+for i, col in enumerate(columns_to_plot):
+    scatter = axes[i].scatter(data['longitude'], data['latitude'],
+                              c=data[col], cmap='viridis', s=10)
+    axes[i].set_title(f'Spatial Distribution of {col}')
+    axes[i].set_xlabel('Longitude')
+    axes[i].set_ylabel('Latitude')
+    plt.colorbar(scatter, ax=axes[i], label=col)
+
+plt.tight_layout()
+plt.show()
+
+# 4. Conclusion for Disjunctive Kriging
+print("\n=== CONCLUSION FOR DISJUNCTIVE KRIGING ===")
+for col in columns_to_plot:
+    cv = variability_results[col]['cv']
+    print(f"\nFor {col}:")
+    print(f"Coefficient of Variation: {cv:.2f}%")
+    
+    if cv < 15:
+        print("Recommendation: Variability is too low, disjunctive kriging may not yield good results.")
+        print("Consider alternative methods such as:")
+        print("  - Simple descriptive analysis")
+        print("  - Clustering to identify spatial patterns")
+        print("  - Direct visualization without complex interpolation")
+    elif cv < 30:
+        print("Recommendation: Moderate variability, disjunctive kriging can be performed but results may be limited.")
+        print("Consider:")
+        print("  - Using a more flexible kernel like Matern")
+        print("  - Adding a noise component (WhiteKernel)")
+        print("  - Performing rigorous cross-validation")
+    else:
+        print("Recommendation: High variability, disjunctive kriging can be performed with good results.")
+        print("Consider:")
+        print("  - Using a standard kernel like RBF")
+        print("  - Experimenting with various kernel parameters")
+
+# 5. Inter-variable Correlation Analysis
+print("\n=== INTER-VARIABLE CORRELATION ANALYSIS ===")
+correlation_matrix = data[columns_to_plot].corr()
+plt.figure(figsize=(8, 6))
+sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', center=0)
+plt.title('Correlation Between Variables (After Log Transformation)')
+plt.show()
+
+print("Correlation matrix:")
+print(correlation_matrix)
+
+
+# After disjunctive kriging we got :
+CONCLUSIONS FOR DISJUNCTIVE KRIGING
+
+For NASC_log:
+Coefficient of Variation: 26.58%
+Recommendation: This variable shows moderate variability. Disjunctive kriging can be performed, but the results may be limited.
+Considerations:
+Using a more flexible kernel, such as Matern, to better model the spatial correlation.
+Adding a noise component (WhiteKernel) to account for measurement error or micro-scale variability.
+Performing rigorous cross-validation to ensure the model's accuracy and robustness.
+
+For total_density_log:
+Coefficient of Variation: 14.01%
+Recommendation: This variable has low variability, suggesting the data points are very similar to each other. Disjunctive kriging may not yield good results as it is designed for data with significant spatial variation.
+Alternative Methods:
+Simple descriptive analysis of the data distribution.
+Clustering to identify any underlying spatial patterns or groups.
+Direct visualization without complex interpolation, as the data is already quite uniform.
+
+For total_biomass_log:
+Coefficient of Variation: 30.57%
+Recommendation: This variable exhibits high variability. This makes it an excellent candidate for disjunctive kriging, which can effectively model and predict values in highly variable datasets.
+Considerations:
+Using a standard kernel like the RBF (Radial Basis Function) kernel, which is often effective for smooth, highly variable data. 
+Experimenting with various kernel parameters to optimize the model's performance for this specific dataset.
+
+
+# Biomass log had highest CV for disjunctive kriging begin to indicator variogram 
+
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from skgstat import Variogram
+
+def fit_variogram_choose_best(file_csv="transformed_result_density_and_biomass_Songhang_ship_2024.csv", value_col="log_biomass"):
+    """
+    Fits various variogram models to spatial data, evaluates them using RMSE,
+    and selects the best one. It also visualizes the result and saves the best model's
+    parameters.
+    
+    Args:
+        file_csv (str): Path to the CSV file containing the data.
+        value_col (str): The name of the column containing the values to be modeled.
+        
+    Returns:
+        dict: A dictionary containing the details of the best variogram model.
+    """
+    try:
+        df = pd.read_csv(file_csv)
+    except FileNotFoundError:
+        print(f"Error: The file '{file_csv}' was not found.")
+        return None
+
+    coords = df[['latitude', 'longitude']].values
+    values = df[value_col].values
+    models = ["spherical", "exponential", "gaussian", "stable", "matern", "cubic"]
+    results = []
+
+    print("Evaluating variogram models:")
+    for m in models:
+        try:
+            V = Variogram(coords, values, model=m)
+            y_true = V.experimental
+            y_pred = V.fitted_model(V.bins)
+            rmse = np.sqrt(np.mean((y_true - y_pred) ** 2))
+            results.append({
+                "model": m,
+                "rmse": rmse,
+                "params": V.parameters,
+                "variogram": V,
+            })
+            print(f"  {m:10s} | RMSE={rmse:.4f} | Params={V.parameters}")
+        except Exception as e:
+            print(f"  {m:10s} | ERROR: {e}")
+            
+    # Check if any model was successfully fitted
+    if not results:
+        print("\nNo variogram models could be fitted successfully.")
+        return None
+
+    # Select the model with the smallest RMSE
+    best = min(results, key=lambda x: x['rmse'])
+    print("\nBest variogram model found:")
+    print(f"  {best['model']} | RMSE={best['rmse']:.4f} | Params={best['params']}")
+
+    # Visualization
+    V = best['variogram']
+    plt.figure(figsize=(8,5))
+    plt.plot(V.bins, V.experimental, 'o-', label='Experimental')
+    plt.plot(V.bins, V.fitted_model(V.bins), 'r--', label=f'Best Model ({best['model']})')
+    plt.xlabel('Lag')
+    plt.ylabel('Semivariance')
+    plt.title(f'Best Variogram: {best['model']} (RMSE={best['rmse']:.3f})')
+    plt.legend()
+    plt.tight_layout()
+    plt.show()
+
+    # Save the best model to a file
+    try:
+        np.save("best_variogram_param.npy", best['params'])
+        with open("best_variogram_model.txt", "w") as f:
+            f.write(f"{best['model']}\n")
+        print("Best model parameters and name saved.")
+    except Exception as e:
+        print(f"Error saving files: {e}")
+
+    return best
+
+if __name__ == "__main__":
+    fit_variogram_choose_best()
+
+
+# Variogram Model Evaluation Results
+Based on the provided evaluation, the spherical model is the best fit for your data.
+Best Model: Spherical
+Root Mean Square Error (RMSE): 0.2030
+Parameters: [2.235, 1.939, 0]
+While several models (spherical, exponential, gaussian, matern, and cubic) all achieved the same RMSE of 0.2030
+The best parameters for the spherical model are:
+Sill (2.235)
+Range (1.939)
+Nugget (0)
+
