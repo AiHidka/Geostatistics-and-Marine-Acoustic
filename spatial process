@@ -1,0 +1,185 @@
+# Make Claster using K-means and DBscan to see distribution of fish species
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.cluster import KMeans
+from sklearn.preprocessing import StandardScaler
+from sklearn.cluster import DBSCAN
+from sklearn.metrics import silhouette_score
+from scipy.stats import skew
+import seaborn as sns
+from mpl_toolkits.mplot3d import Axes3D
+
+# Read the CSV file
+file_path = "result_density_and_biomass_Songhang_ship_2024.csv"  # Replace with the path to your CSV file
+try:
+    data = pd.read_csv(file_path)
+    print("Data successfully loaded:")
+    print(data.head())  # Display the first 5 rows of the data
+except FileNotFoundError:
+    print(f"File {file_path} not found. Please ensure the file path is correct.")
+    exit()
+
+# Print column names for verification
+print("\nAvailable column names:")
+print(data.columns.tolist())
+
+# Ensure required columns are present in the CSV file
+required_columns = ['NASC', 'total_density', 'total_biomass']
+species_columns = [col for col in data.columns if col.startswith('density_') or col.startswith('biomassa_')]
+required_columns += species_columns
+
+# Check if all columns exist
+if not all(col in data.columns for col in required_columns):
+    print(f"\nCSV file must have the following columns: {required_columns}")
+    print("Using available columns instead:")
+    print(data.columns.tolist())
+    exit()
+
+# Convert columns to a numeric type
+for col in required_columns:
+    data[col] = pd.to_numeric(data[col], errors='coerce')
+
+# Handle NaN values
+if data.isnull().values.any():
+    print("Data has NaN values. Handling NaN values...")
+    data.fillna(data.mean(), inplace=True)  # Replace NaNs with the column mean
+
+# Display descriptive statistics
+for column in required_columns:
+    print(f"\nStatistics for column '{column}':")
+    print(f"Mean: {data[column].mean():.3f}")
+    print(f"Variance: {data[column].var():.3f}")
+    print(f"Standard Deviation: {data[column].std():.3f}")
+    print(f"Skewness: {skew(data[column]):.3f}")
+
+# Select columns as features
+features = data[required_columns].values
+
+# Normalize the data using StandardScaler
+scaler = StandardScaler()
+features_scaled = scaler.fit_transform(features)
+
+# Option 1: K-Means Clustering
+kmeans = KMeans(n_clusters=3, random_state=42)  # Change the number of clusters as needed
+kmeans_labels = kmeans.fit_predict(features_scaled)
+data['kmeans_label'] = kmeans_labels  # Add cluster labels to the data
+
+# Option 2: DBSCAN Clustering
+dbscan = DBSCAN(eps=0.5, min_samples=5)  # Adjust eps and min_samples according to your data
+dbscan_labels = dbscan.fit_predict(features_scaled)
+data['dbscan_label'] = dbscan_labels  # Add cluster labels to the data
+
+# Evaluate Silhouette Score for K-Means
+silhouette_kmeans = silhouette_score(features_scaled, kmeans_labels)
+print(f"\nSilhouette Score for K-Means: {silhouette_kmeans}")
+
+# Cluster Distribution
+print("\nCluster Distribution with K-Means:")
+print(data['kmeans_label'].value_counts())
+
+print("\nCluster Distribution with DBSCAN:")
+print(data['dbscan_label'].value_counts())
+
+# Visualize K-Means clustering results
+plt.figure(figsize=(10, 5))
+plt.scatter(data['total_density'], data['total_biomass'], c=data['kmeans_label'], cmap="viridis", label="K-Means Clusters")
+plt.colorbar(label="Cluster")
+plt.title("K-Means Clustering (Density vs Biomass)")
+plt.xlabel("Total Density")
+plt.ylabel("Total Biomass")
+plt.legend()
+plt.show()
+
+# Visualize DBSCAN clustering results
+plt.figure(figsize=(10, 5))
+plt.scatter(data['total_density'], data['total_biomass'], c=data['dbscan_label'], cmap="plasma", label="DBSCAN Clusters")
+plt.colorbar(label="Cluster")
+plt.title("DBSCAN Clustering (Density vs Biomass)")
+plt.xlabel("Total Density")
+plt.ylabel("Total Biomass")
+plt.legend()
+plt.show()
+
+# Visualize Cluster Profiles
+cluster_profiles = data.groupby('kmeans_label').mean()
+print("\nFeature Profile per Cluster (K-Means):")
+print(cluster_profiles)
+
+# 3D scatter plot for K-Means clusters
+fig = plt.figure(figsize=(10, 7))
+ax = fig.add_subplot(111, projection='3d')
+scatter = ax.scatter(
+    data['total_density'], data['total_biomass'], data['NASC'],
+    c=data['kmeans_label'], cmap='viridis', alpha=0.7
+)
+ax.set_title("3D Scatter Plot of Clusters (K-Means)")
+ax.set_xlabel("Total Density")
+ax.set_ylabel("Total Biomass")
+ax.set_zlabel("NASC")
+plt.colorbar(scatter, label="Cluster")
+plt.show()
+
+# Heatmap of cluster distribution based on total_density and total_biomass
+plt.figure(figsize=(10, 7))
+sns.kdeplot(
+    x=data['total_density'], y=data['total_biomass'],
+    hue=data['kmeans_label'], fill=True, cmap="viridis", alpha=0.7
+)
+plt.title("Heatmap of Cluster Distribution (K-Means)")
+plt.xlabel("Total Density")
+plt.ylabel("Total Biomass")
+plt.show()
+
+# Outlier analysis for DBSCAN
+outliers = data[data['dbscan_label'] == -1]
+print("\nOutliers (DBSCAN):")
+print(outliers)
+
+plt.figure(figsize=(10, 5))
+plt.scatter(outliers['total_density'], outliers['total_biomass'], color='red', alpha=0.6, label="Outliers")
+plt.scatter(data['total_density'], data['total_biomass'], c=data['dbscan_label'], cmap='plasma', alpha=0.7)
+plt.title("Outliers in Data (DBSCAN)")
+plt.xlabel("Total Density")
+plt.ylabel("Total Biomass")
+plt.legend()
+plt.show()
+
+# Analyze fish species in each cluster
+species_columns = [col for col in data.columns if col.startswith('density_') or col.startswith('biomass_')]
+species_info = data[['kmeans_label'] + species_columns]
+
+# Pivot the table to display species along with density and biomass per cluster
+species_info_melted = species_info.melt(id_vars='kmeans_label', var_name='species_metric', value_name='value')
+
+# Split the 'species_metric' column into 'metric' and 'species'
+species_info_melted[['metric', 'species']] = species_info_melted['species_metric'].str.split('_', expand=True)
+
+# Filter to ensure only valid species are considered
+valid_species = species_info_melted.dropna(subset=['species', 'metric'])
+
+# Pivot back to get a table with species, cluster, metric, and value
+species_per_cluster = valid_species.pivot_table(index=['kmeans_label', 'species'], columns='metric', values='value', aggfunc='sum')
+
+# Reset the index for easier readability
+species_per_cluster = species_per_cluster.reset_index()
+
+# Display the results
+print("\nSpecies Analysis per Cluster (K-Means):")
+print(species_per_cluster)
+
+# Visualize species density and biomass per cluster
+for metric in ['density', 'biomass']:
+    if metric not in valid_species['metric'].values:
+        print(f"No data for {metric} in the dataset.")
+        continue
+
+    plt.figure(figsize=(12, 8))
+    metric_data = valid_species[valid_species['metric'] == metric]
+    sns.barplot(x='kmeans_label', y='value', hue='species', data=metric_data, estimator=np.sum)
+    plt.title(f'Total {metric.capitalize()} per Cluster and Species')
+    plt.xlabel('Cluster')
+    plt.ylabel(f'Total {metric.capitalize()}')
+    plt.legend(title='Species', bbox_to_anchor=(1.05, 1), loc='upper left')
+    plt.tight_layout()
+    plt.show()
