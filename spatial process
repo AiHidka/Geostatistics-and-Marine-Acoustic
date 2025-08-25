@@ -434,7 +434,7 @@ print("Correlation matrix:")
 print(correlation_matrix)
 
 
-# After disjunctive kriging we got :
+# After transformation and disjunctive kriging we got :
 CONCLUSIONS FOR DISJUNCTIVE KRIGING
 
 For NASC_log:
