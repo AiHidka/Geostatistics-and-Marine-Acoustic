@@ -1,32 +1,11 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36" version="29.1.1">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36" version="29.2.4">
   <diagram name="Page-1" id="pyWUfLzprs8-RjYu1XeS">
-    <mxGraphModel dx="883" dy="703" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1025" dy="422" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="_oBm3orW66uu9GU3ClNC-9" connectable="0" parent="1" style="group" value="" vertex="1">
-          <mxGeometry height="100" width="541.68" x="150" y="80" as="geometry" />
-        </mxCell>
-        <mxCell id="_oBm3orW66uu9GU3ClNC-4" edge="1" parent="_oBm3orW66uu9GU3ClNC-9" source="_oBm3orW66uu9GU3ClNC-1" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" target="_oBm3orW66uu9GU3ClNC-2" value="">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="_oBm3orW66uu9GU3ClNC-1" parent="_oBm3orW66uu9GU3ClNC-9" style="ellipse;whiteSpace=wrap;html=1;" value="Research Planning" vertex="1">
-          <mxGeometry height="99.99999999999999" width="104.41859644702028" as="geometry" />
-        </mxCell>
-        <mxCell id="_oBm3orW66uu9GU3ClNC-5" edge="1" parent="_oBm3orW66uu9GU3ClNC-9" source="_oBm3orW66uu9GU3ClNC-2" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" target="_oBm3orW66uu9GU3ClNC-3" value="">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="_oBm3orW66uu9GU3ClNC-2" parent="_oBm3orW66uu9GU3ClNC-9" style="ellipse;whiteSpace=wrap;html=1;" value="Songhang Report for Marine Acoustic 2024" vertex="1">
-          <mxGeometry height="99.99999999999999" width="104.41859644702028" x="142.36417790097013" as="geometry" />
-        </mxCell>
-        <mxCell id="_oBm3orW66uu9GU3ClNC-7" edge="1" parent="_oBm3orW66uu9GU3ClNC-9" source="_oBm3orW66uu9GU3ClNC-3" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" target="_oBm3orW66uu9GU3ClNC-6" value="">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="_oBm3orW66uu9GU3ClNC-3" parent="_oBm3orW66uu9GU3ClNC-9" style="ellipse;whiteSpace=wrap;html=1;" value="Literature" vertex="1">
-          <mxGeometry height="99.99999999999999" width="104.41859644702028" x="294.8972256520096" as="geometry" />
-        </mxCell>
-        <mxCell id="_oBm3orW66uu9GU3ClNC-6" parent="_oBm3orW66uu9GU3ClNC-9" style="ellipse;whiteSpace=wrap;html=1;" value="Research Proposal" vertex="1">
-          <mxGeometry height="99.99999999999999" width="104.41859644702028" x="437.2614035529797" as="geometry" />
+        <mxCell id="LaHnetKk3gWfZBxfKN08-82" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="80" width="151.37" x="624.32" y="410" as="geometry" />
         </mxCell>
         <mxCell id="_oBm3orW66uu9GU3ClNC-50" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;fontSize=12;startSize=8;endSize=8;curved=1;" value="">
           <mxGeometry height="50" relative="1" width="50" as="geometry">
@@ -43,70 +22,215 @@
             <mxPoint x="840" y="220" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="0wxmuMrkJi5ulnBF5Np0-2" edge="1" parent="1" source="_oBm3orW66uu9GU3ClNC-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;">
+        <mxCell id="LaHnetKk3gWfZBxfKN08-4" edge="1" parent="1" source="LaHnetKk3gWfZBxfKN08-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="LaHnetKk3gWfZBxfKN08-3" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LaHnetKk3gWfZBxfKN08-2" parent="1" style="html=1;dashed=0;whiteSpace=wrap;shape=mxgraph.dfd.start" value="Maridata Analyze Program" vertex="1">
+          <mxGeometry height="50" width="170" x="370" as="geometry" />
+        </mxCell>
+        <mxCell id="LaHnetKk3gWfZBxfKN08-112" edge="1" parent="1" source="LaHnetKk3gWfZBxfKN08-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" value="">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="640.8400000000001" y="210" as="targetPoint" />
+            <mxPoint x="220" y="105" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="0wxmuMrkJi5ulnBF5Np0-5" edge="1" parent="1" source="0wxmuMrkJi5ulnBF5Np0-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="0wxmuMrkJi5ulnBF5Np0-4" value="">
+        <mxCell id="LaHnetKk3gWfZBxfKN08-3" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.multi-document;whiteSpace=wrap;" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Ecological Data (Mangrove,Seagrass,Coral Reef)&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;Organism (Plankton,Benthos,Fish)&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="287.25" x="311.38" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="LaHnetKk3gWfZBxfKN08-6" edge="1" parent="1" source="LaHnetKk3gWfZBxfKN08-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="LaHnetKk3gWfZBxfKN08-3" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="0wxmuMrkJi5ulnBF5Np0-3" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Marine Acoustics Data" vertex="1">
-          <mxGeometry height="99.99999999999999" width="104.41859644702028" x="587.26" y="210" as="geometry" />
+        <mxCell id="LaHnetKk3gWfZBxfKN08-5" parent="1" style="shape=internalStorage;whiteSpace=wrap;html=1;dx=15;dy=15;rounded=1;arcSize=8;strokeWidth=2;" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;resources :&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;&amp;nbsp;Student Script&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;Journal&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;Report&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;Lecturer&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="110" x="630" y="55" as="geometry" />
         </mxCell>
-        <mxCell id="0wxmuMrkJi5ulnBF5Np0-7" edge="1" parent="1" source="0wxmuMrkJi5ulnBF5Np0-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="0wxmuMrkJi5ulnBF5Np0-6" value="">
+        <mxCell id="LaHnetKk3gWfZBxfKN08-42" edge="1" parent="1" source="LaHnetKk3gWfZBxfKN08-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="LaHnetKk3gWfZBxfKN08-3" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="0wxmuMrkJi5ulnBF5Np0-10" edge="1" parent="1" source="0wxmuMrkJi5ulnBF5Np0-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="0wxmuMrkJi5ulnBF5Np0-6" value="">
+        <mxCell id="LaHnetKk3gWfZBxfKN08-52" edge="1" parent="1" source="LaHnetKk3gWfZBxfKN08-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="LaHnetKk3gWfZBxfKN08-49">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="0wxmuMrkJi5ulnBF5Np0-11" edge="1" parent="1" source="0wxmuMrkJi5ulnBF5Np0-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="0wxmuMrkJi5ulnBF5Np0-6" value="">
+        <mxCell id="LaHnetKk3gWfZBxfKN08-22" collapsed="1" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=20;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" value="variable data" vertex="1">
+          <mxGeometry height="30" width="90" x="300" y="190" as="geometry">
+            <mxRectangle height="210" width="160" x="300" y="190" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LaHnetKk3gWfZBxfKN08-23" parent="LaHnetKk3gWfZBxfKN08-22" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" value="site id (string)" vertex="1">
+          <mxGeometry height="30" width="160" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="LaHnetKk3gWfZBxfKN08-24" parent="LaHnetKk3gWfZBxfKN08-22" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" value="coordinate/ lat&amp;amp;long (integer)" vertex="1">
+          <mxGeometry height="30" width="160" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="LaHnetKk3gWfZBxfKN08-26" parent="LaHnetKk3gWfZBxfKN08-22" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" value="transect_num 0-100 (integer)" vertex="1">
+          <mxGeometry height="40" width="160" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="LaHnetKk3gWfZBxfKN08-27" parent="LaHnetKk3gWfZBxfKN08-22" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" value="addictive_spe (integer)" vertex="1">
+          <mxGeometry height="30" width="160" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="LaHnetKk3gWfZBxfKN08-28" parent="LaHnetKk3gWfZBxfKN08-22" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" value="species_acr (string)" vertex="1">
+          <mxGeometry height="30" width="160" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="LaHnetKk3gWfZBxfKN08-29" parent="LaHnetKk3gWfZBxfKN08-22" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" value="density/idv/m (integer)" vertex="1">
+          <mxGeometry height="30" width="160" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="LaHnetKk3gWfZBxfKN08-41" edge="1" parent="1" source="LaHnetKk3gWfZBxfKN08-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="LaHnetKk3gWfZBxfKN08-3" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="0wxmuMrkJi5ulnBF5Np0-12" edge="1" parent="1" source="0wxmuMrkJi5ulnBF5Np0-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="0wxmuMrkJi5ulnBF5Np0-6" value="">
+        <mxCell id="LaHnetKk3gWfZBxfKN08-30" collapsed="1" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" value="additional" vertex="1">
+          <mxGeometry height="30" width="100" x="510" y="190" as="geometry">
+            <mxRectangle height="210" width="160" x="510" y="190" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LaHnetKk3gWfZBxfKN08-31" parent="LaHnetKk3gWfZBxfKN08-30" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" value="cover species / % (integer)" vertex="1">
+          <mxGeometry height="30" width="160" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="LaHnetKk3gWfZBxfKN08-32" parent="LaHnetKk3gWfZBxfKN08-30" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" value="Diameter Breast Height/cm (integer)" vertex="1">
+          <mxGeometry height="34" width="160" y="56" as="geometry" />
+        </mxCell>
+        <mxCell id="LaHnetKk3gWfZBxfKN08-33" parent="LaHnetKk3gWfZBxfKN08-30" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" value="canopy/% (integer)" vertex="1">
+          <mxGeometry height="30" width="160" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="LaHnetKk3gWfZBxfKN08-34" parent="LaHnetKk3gWfZBxfKN08-30" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" value="height/cm (integer)" vertex="1">
+          <mxGeometry height="30" width="160" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="LaHnetKk3gWfZBxfKN08-35" parent="LaHnetKk3gWfZBxfKN08-30" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" value="substrate (string)" vertex="1">
+          <mxGeometry height="30" width="160" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="LaHnetKk3gWfZBxfKN08-36" parent="LaHnetKk3gWfZBxfKN08-30" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" value="disease (string)" vertex="1">
+          <mxGeometry height="30" width="160" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="LaHnetKk3gWfZBxfKN08-49" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.database;whiteSpace=wrap;" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;format data: csv,txt,excel&lt;/font&gt;" vertex="1">
+          <mxGeometry height="80" width="60" x="420" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="LaHnetKk3gWfZBxfKN08-51" edge="1" parent="1" source="LaHnetKk3gWfZBxfKN08-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" target="LaHnetKk3gWfZBxfKN08-49">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="0wxmuMrkJi5ulnBF5Np0-4" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Machine Learning" vertex="1">
-          <mxGeometry height="99.99999999999999" width="104.41859644702028" x="460.0014035529797" y="210" as="geometry" />
-        </mxCell>
-        <mxCell id="0wxmuMrkJi5ulnBF5Np0-14" edge="1" parent="1" source="0wxmuMrkJi5ulnBF5Np0-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="0wxmuMrkJi5ulnBF5Np0-13">
+        <mxCell id="LaHnetKk3gWfZBxfKN08-50" edge="1" parent="1" source="LaHnetKk3gWfZBxfKN08-49" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" target="LaHnetKk3gWfZBxfKN08-49">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="0wxmuMrkJi5ulnBF5Np0-6" parent="1" style="whiteSpace=wrap;html=1;" value="Using few tools to stratification analysis" vertex="1">
-          <mxGeometry height="60" width="162.21" x="270" y="230" as="geometry" />
+        <mxCell id="LaHnetKk3gWfZBxfKN08-72" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="307.72727272727275" width="310" x="290" y="290" as="geometry" />
         </mxCell>
-        <mxCell id="0wxmuMrkJi5ulnBF5Np0-16" edge="1" parent="1" source="0wxmuMrkJi5ulnBF5Np0-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="0wxmuMrkJi5ulnBF5Np0-15">
+        <mxCell id="LaHnetKk3gWfZBxfKN08-57" parent="LaHnetKk3gWfZBxfKN08-72" style="rhombus;whiteSpace=wrap;html=1;rounded=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;container=0;" value="&lt;font style=&quot;font-size: 8px;&quot;&gt;error back to&amp;nbsp;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;format&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="77.5" x="232.5" as="geometry" />
+        </mxCell>
+        <mxCell id="LaHnetKk3gWfZBxfKN08-58" edge="1" parent="LaHnetKk3gWfZBxfKN08-72" source="LaHnetKk3gWfZBxfKN08-55" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="LaHnetKk3gWfZBxfKN08-57" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="0wxmuMrkJi5ulnBF5Np0-13" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Generative Addictive Model (GAM)" vertex="1">
-          <mxGeometry height="99.99999999999999" width="104.41859644702028" x="140" y="210" as="geometry" />
+        <mxCell id="LaHnetKk3gWfZBxfKN08-71" connectable="0" parent="LaHnetKk3gWfZBxfKN08-72" style="group" value="" vertex="1">
+          <mxGeometry height="300" width="210.3658536585366" y="7.727272727272748" as="geometry" />
         </mxCell>
-        <mxCell id="0wxmuMrkJi5ulnBF5Np0-24" edge="1" parent="1" source="0wxmuMrkJi5ulnBF5Np0-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="0wxmuMrkJi5ulnBF5Np0-17">
+        <mxCell id="LaHnetKk3gWfZBxfKN08-56" edge="1" parent="LaHnetKk3gWfZBxfKN08-71" source="LaHnetKk3gWfZBxfKN08-53" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="LaHnetKk3gWfZBxfKN08-55">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="0wxmuMrkJi5ulnBF5Np0-15" parent="1" style="whiteSpace=wrap;html=1;" value="Interpratation every strata and calculate biomass&amp;nbsp;" vertex="1">
-          <mxGeometry height="60" width="162.21" x="111.1" y="350" as="geometry" />
+        <mxCell id="LaHnetKk3gWfZBxfKN08-53" parent="LaHnetKk3gWfZBxfKN08-71" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;container=0;" value="&lt;font style=&quot;font-size: 8px;&quot;&gt;data&amp;nbsp;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="46.36363636363637" width="84.14634146341464" x="30" as="geometry" />
         </mxCell>
-        <mxCell id="0wxmuMrkJi5ulnBF5Np0-25" edge="1" parent="1" source="0wxmuMrkJi5ulnBF5Np0-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="0wxmuMrkJi5ulnBF5Np0-18">
+        <mxCell id="LaHnetKk3gWfZBxfKN08-60" edge="1" parent="LaHnetKk3gWfZBxfKN08-71" source="LaHnetKk3gWfZBxfKN08-55" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="LaHnetKk3gWfZBxfKN08-59" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="0wxmuMrkJi5ulnBF5Np0-17" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Geostatistics Model" vertex="1">
-          <mxGeometry height="99.99999999999999" width="104.41859644702028" x="298.9" y="330" as="geometry" />
+        <mxCell id="LaHnetKk3gWfZBxfKN08-55" parent="LaHnetKk3gWfZBxfKN08-71" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;container=0;" value="&lt;font style=&quot;font-size: 8px;&quot;&gt;cleaning data&lt;/font&gt;" vertex="1">
+          <mxGeometry height="46.36363636363637" width="67.31707317073172" x="143.0487804878049" as="geometry" />
         </mxCell>
-        <mxCell id="0wxmuMrkJi5ulnBF5Np0-21" edge="1" parent="1" source="0wxmuMrkJi5ulnBF5Np0-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="0wxmuMrkJi5ulnBF5Np0-19">
+        <mxCell id="LaHnetKk3gWfZBxfKN08-59" parent="LaHnetKk3gWfZBxfKN08-71" style="rhombus;whiteSpace=wrap;html=1;rounded=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;container=0;" value="&lt;font style=&quot;font-size: 8px;&quot;&gt;continue&amp;nbsp;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;analyze&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="61.81818181818181" width="67.31707317073172" x="143.0487804878049" y="62.27454545454546" as="geometry" />
+        </mxCell>
+        <mxCell id="LaHnetKk3gWfZBxfKN08-108" parent="LaHnetKk3gWfZBxfKN08-71" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.annotation_2;align=left;labelPosition=right;pointerEvents=1;" value="" vertex="1">
+          <mxGeometry height="300" width="20" as="geometry" />
+        </mxCell>
+        <mxCell id="LaHnetKk3gWfZBxfKN08-73" parent="LaHnetKk3gWfZBxfKN08-72" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.annotation_2;align=left;labelPosition=right;pointerEvents=1;rotation=90;" value="" vertex="1">
+          <mxGeometry height="170" width="7.64" x="155" y="-85" as="geometry" />
+        </mxCell>
+        <mxCell id="LaHnetKk3gWfZBxfKN08-84" edge="1" parent="1" source="LaHnetKk3gWfZBxfKN08-77" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="620" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LaHnetKk3gWfZBxfKN08-86" edge="1" parent="1" source="LaHnetKk3gWfZBxfKN08-77" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0.88;exitDx=0;exitDy=0;exitPerimeter=0;" target="LaHnetKk3gWfZBxfKN08-85">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="0wxmuMrkJi5ulnBF5Np0-18" parent="1" style="whiteSpace=wrap;html=1;" value="Structural analysis and kriging&amp;nbsp;" vertex="1">
-          <mxGeometry height="60" width="162.21" x="425.05" y="350" as="geometry" />
+        <mxCell id="LaHnetKk3gWfZBxfKN08-77" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.multi-document;whiteSpace=wrap;" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;statistical&amp;nbsp;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;process&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="88" x="422.71" y="450" as="geometry" />
         </mxCell>
-        <mxCell id="0wxmuMrkJi5ulnBF5Np0-23" edge="1" parent="1" source="0wxmuMrkJi5ulnBF5Np0-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="0wxmuMrkJi5ulnBF5Np0-20">
+        <mxCell id="LaHnetKk3gWfZBxfKN08-79" edge="1" parent="1" source="LaHnetKk3gWfZBxfKN08-59" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="LaHnetKk3gWfZBxfKN08-77" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="0wxmuMrkJi5ulnBF5Np0-19" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Output and Report" vertex="1">
-          <mxGeometry height="99.99999999999999" width="104.41859644702028" x="610" y="330" as="geometry" />
+        <mxCell id="LaHnetKk3gWfZBxfKN08-80" parent="1" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" value="&lt;h1 style=&quot;text-align: justify; margin-top: 0px;&quot;&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;Important Statistical&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-size: 10px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-weight: normal;&quot;&gt;analisis secara garis besar dibagi atas univariate dan multivariate&amp;nbsp; untuk mendapatkan data ekologis&amp;nbsp;&lt;/span&gt;&lt;/h1&gt;" vertex="1">
+          <mxGeometry height="90" width="140" x="629.9999999999999" y="400" as="geometry" />
         </mxCell>
-        <mxCell id="0wxmuMrkJi5ulnBF5Np0-20" parent="1" style="whiteSpace=wrap;html=1;" value="Estimation result validate using RMSE or MAE" vertex="1">
-          <mxGeometry height="60" width="162.21" x="580" y="460" as="geometry" />
+        <mxCell id="LaHnetKk3gWfZBxfKN08-92" edge="1" parent="1" source="LaHnetKk3gWfZBxfKN08-85" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="620" y="565" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LaHnetKk3gWfZBxfKN08-100" edge="1" parent="1" source="LaHnetKk3gWfZBxfKN08-85" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="467" y="630" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LaHnetKk3gWfZBxfKN08-85" parent="1" style="html=1;whiteSpace=wrap;strokeColor=none;fillColor=#0079D6;labelPosition=center;verticalLabelPosition=middle;verticalAlign=top;align=center;fontSize=12;outlineConnect=0;spacingTop=-6;fontColor=#FFFFFF;sketch=0;shape=mxgraph.sitemap.chart;" value="Chart" vertex="1">
+          <mxGeometry height="70" width="120" x="407" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="LaHnetKk3gWfZBxfKN08-93" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="80" width="151.37" x="624.3199999999999" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="LaHnetKk3gWfZBxfKN08-94" parent="1" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" value="&lt;h1 style=&quot;text-align: justify; margin-top: 0px;&quot;&gt;&lt;span style=&quot;font-size: 10px; font-weight: normal;&quot;&gt;hasil visualisasi nantinya akan dijelaskan dengan LLM&lt;/span&gt;&lt;/h1&gt;" vertex="1">
+          <mxGeometry height="90" width="140" x="629.9999999999998" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="LaHnetKk3gWfZBxfKN08-105" edge="1" parent="1" source="LaHnetKk3gWfZBxfKN08-97" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="350" y="650" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LaHnetKk3gWfZBxfKN08-97" parent="1" style="shape=mxgraph.networks2.icon;aspect=fixed;fillColor=#EDEDED;strokeColor=#000000;gradientColor=#5B6163;network2IconShadow=1;network2bgFillColor=none;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;network2Icon=mxgraph.networks2.data_management;network2IconW=0.8252;network2IconH=0.9989;" value="" vertex="1">
+          <mxGeometry height="60" width="49.57" x="390" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="LaHnetKk3gWfZBxfKN08-98" parent="1" style="shape=mxgraph.networks2.icon;aspect=fixed;fillColor=#EDEDED;strokeColor=#000000;gradientColor=#5B6163;network2IconShadow=1;network2bgFillColor=none;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;network2Icon=mxgraph.networks2.cloud;network2IconYOffset=-0.08;network2IconW=1.0004;network2IconH=0.7222;" value="" vertex="1">
+          <mxGeometry height="36.11" width="50.019999999999996" x="453" y="632" as="geometry" />
+        </mxCell>
+        <mxCell id="LaHnetKk3gWfZBxfKN08-99" parent="1" style="fillColorStyles=neutralFill;neutralFill=#9DA6A8;shape=mxgraph.networks2.icon;aspect=fixed;fillColor=#EDEDED;strokeColor=#000000;gradientColor=#5B6163;network2IconShadow=1;network2bgFillColor=none;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;network2Icon=mxgraph.networks2.global_server;network2IconW=1;network2IconH=1;" value="" vertex="1">
+          <mxGeometry height="50" width="50" x="511" y="625" as="geometry" />
+        </mxCell>
+        <mxCell id="LaHnetKk3gWfZBxfKN08-102" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="80" width="151.37" x="624.3199999999999" y="630" as="geometry" />
+        </mxCell>
+        <mxCell id="LaHnetKk3gWfZBxfKN08-119" edge="1" parent="1" source="LaHnetKk3gWfZBxfKN08-103" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="580" y="665" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LaHnetKk3gWfZBxfKN08-103" parent="1" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" value="&lt;h1 style=&quot;text-align: justify; margin-top: 0px;&quot;&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;data hasil akan dilakukan penyimpanan baik itu dari hardisk, cloud, atau server yang lebih besar&lt;/font&gt;&lt;/span&gt;&lt;/h1&gt;" vertex="1">
+          <mxGeometry height="90" width="140" x="629.9999999999998" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="LaHnetKk3gWfZBxfKN08-106" edge="1" parent="1" source="LaHnetKk3gWfZBxfKN08-104" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="LaHnetKk3gWfZBxfKN08-5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="315" y="760" />
+              <mxPoint x="800" y="760" />
+              <mxPoint x="800" y="173" />
+              <mxPoint x="685" y="173" />
+            </Array>
+            <mxPoint x="690" y="172.5599853515625" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LaHnetKk3gWfZBxfKN08-118" edge="1" parent="1" source="LaHnetKk3gWfZBxfKN08-104" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="LaHnetKk3gWfZBxfKN08-114" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LaHnetKk3gWfZBxfKN08-104" parent="1" style="dashed=0;outlineConnect=0;html=1;align=center;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.webicons.google;gradientColor=#DFDEDE" value="" vertex="1">
+          <mxGeometry height="80" width="70" x="280" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="LaHnetKk3gWfZBxfKN08-107" parent="1" style="dashed=0;outlineConnect=0;html=1;align=center;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.webicons.github;gradientColor=#DFDEDE" value="" vertex="1">
+          <mxGeometry height="67.11" width="70" x="220" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="LaHnetKk3gWfZBxfKN08-109" parent="1" style="shape=mxgraph.networks2.icon;aspect=fixed;fillColor=#EDEDED;strokeColor=#000000;gradientColor=#5B6163;network2IconShadow=1;network2bgFillColor=none;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;network2Icon=mxgraph.networks2.user_male;network2IconW=0.8918;network2IconH=1.0003;" value="" vertex="1">
+          <mxGeometry height="50.02" width="44.59" x="27.77" y="87.17" as="geometry" />
+        </mxCell>
+        <mxCell id="LaHnetKk3gWfZBxfKN08-113" parent="1" style="html=1;dashed=0;whiteSpace=wrap;shape=mxgraph.dfd.start" value="Target for this Program" vertex="1">
+          <mxGeometry height="50" width="170" x="27.769999999999982" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="LaHnetKk3gWfZBxfKN08-114" parent="1" style="dashed=0;outlineConnect=0;html=1;align=center;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.weblogos.google" value="" vertex="1">
+          <mxGeometry height="47.21" width="50" x="160" y="84.36000000000001" as="geometry" />
+        </mxCell>
+        <mxCell id="LaHnetKk3gWfZBxfKN08-115" parent="1" style="shape=mxgraph.signs.science.microscope;html=1;pointerEvents=1;fillColor=#000000;strokeColor=none;verticalLabelPosition=bottom;verticalAlign=top;align=center;sketch=0;" value="" vertex="1">
+          <mxGeometry height="55.64" width="50" x="90" y="84.36" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
